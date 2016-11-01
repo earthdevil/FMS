@@ -1,18 +1,18 @@
 package org.smart4j.chapter1;
 
 /**
- * Created by Madman on 2016/7/28.
+ * Created by Madman
  */
 
-        import java.io.IOException;
-        import java.text.DateFormat;
-        import java.text.SimpleDateFormat;
-        import java.util.Date;
         import javax.servlet.ServletException;
-        import javax.servlet.annotation.WebServlet;
-        import javax.servlet.http.HttpServlet;
-        import javax.servlet.http.HttpServletRequest;
-        import javax.servlet.http.HttpServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
@@ -23,6 +23,7 @@ public class HelloServlet extends HttpServlet {
         String currentTime = dateFormat.format(new Date());
         req.setAttribute("currentTime", currentTime);
         req.setAttribute("devil","1");
+        req.setAttribute("飞","2");
         req.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(req, resp);
     }
 }
