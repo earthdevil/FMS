@@ -25,6 +25,7 @@ public class HelloServlet extends HttpServlet {
         req.setAttribute("devil","1");
         req.setAttribute("飞","2");
         req.setAttribute("add","继续");
+        req.setAttribute("2","2");
 
         req.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(req, resp);
     }
